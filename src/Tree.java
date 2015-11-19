@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Random;
 
 public class Tree {
@@ -27,7 +28,7 @@ public class Tree {
 			}
 		} else if (node.compare(current, node) == 0) {
 			System.out
-					.println("Warn: skipping insertion, node with same value exists");
+					.println("Warn: skipping insertion, node with the same value exists");
 		}
 		
 	}
@@ -37,7 +38,7 @@ public class Tree {
 	}
 	
 	public void bfs(Node node){
-		LinkedList<Node> q = new LinkedList<Node>();
+		Queue<Node> q = new LinkedList<Node>();
 		System.out.println("At: "+node.toString());
 		node.marked=true;
 		q.add(node);
